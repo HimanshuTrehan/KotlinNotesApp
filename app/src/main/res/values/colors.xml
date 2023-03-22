@@ -10,4 +10,7 @@
     <color name="mainText">#222222</color>
     <color name="textAd">#9B9B9B</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF5151</color>
+    <color name="green">#11D998</color>
+    <color name="yellow">#D9D925</color>
 </resources>
