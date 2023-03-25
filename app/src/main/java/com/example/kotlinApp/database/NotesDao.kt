@@ -15,7 +15,7 @@ interface NotesDao {
 
 
     @Query("SELECT * FROM Notes")
-    fun getNotesData():LiveData<NotesEntityModel>
+    fun getNotesData():LiveData<List<NotesEntityModel>>
 
     @Insert(onConflict = REPLACE)
     suspend fun addNotes(notes:NotesEntityModel)
