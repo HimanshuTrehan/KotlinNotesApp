@@ -12,7 +12,7 @@ class NotesEntityModel (
     var title:String?,
     var subTitle:String?,
     var notes:String? ,
-    var date:Date? = Date(),
-    var priority:String?
+    var date:String? ,
+    var priority:Int?
 
 )

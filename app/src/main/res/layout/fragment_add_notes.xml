@@ -67,6 +67,7 @@
         android:background="@drawable/yellow_circle"/>
 
     <EditText
+        android:id="@+id/notes_txt"
         android:alpha="0.7"
         android:hint="@string/notes"
         android:layout_width="match_parent"
