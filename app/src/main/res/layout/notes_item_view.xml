@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView android:layout_margin="10dp"
+    android:elevation="2dp"
+    android:id="@+id/notes_lyt"
+    app:cardCornerRadius="10dp"
     android:background="@color/textAd"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -14,6 +19,7 @@
             android:id="@+id/title_txt"
             android:textStyle="bold"
             android:textSize="16sp"
+            android:layout_marginEnd="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/mainText"/>
@@ -47,9 +53,8 @@
 
         <View
             android:id="@+id/priority"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/red_circle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_alignParentEnd="true"/>
 
 

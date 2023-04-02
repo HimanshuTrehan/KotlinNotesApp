@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.kotlinApp.fragments.HomeFragment"
-        android:label="fragment_home"
+        android:label="Notes App"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_addNotesFragment"
@@ -20,19 +20,24 @@
     <fragment
         android:id="@+id/addNotesFragment"
         android:name="com.example.kotlinApp.fragments.AddNotesFragment"
-        android:label="fragment_add_notes"
+        android:label="Add Notes"
         tools:layout="@layout/fragment_add_notes" >
         <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
             android:id="@+id/action_addNotesFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/editNotesFragment"
         android:name="com.example.kotlinApp.fragments.EditNotesFragment"
-        android:label="fragment_edit_notes"
+        android:label="Update Notes"
         tools:layout="@layout/fragment_edit_notes" >
         <action
             android:id="@+id/action_editNotesFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.kotlinApp.model.NotesEntityModel" />
     </fragment>
 </navigation>

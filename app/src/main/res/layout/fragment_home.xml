@@ -23,6 +23,20 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
 
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Notes Added"
+            android:textSize="26sp"
+            android:textColor="@color/mainText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/add_notes"

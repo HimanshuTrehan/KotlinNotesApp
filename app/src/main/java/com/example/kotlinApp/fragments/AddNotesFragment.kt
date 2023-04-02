@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 import com.example.kotlinApp.model.NotesEntityModel
 import com.example.kotlinApp.viewmodel.NotesViewModel
 import com.example.lotlinApp.R
@@ -33,7 +33,7 @@ lateinit var binding: FragmentAddNotesBinding
         binding = FragmentAddNotesBinding.inflate(inflater,container,false)
 
         binding.addNotes.setOnClickListener {
-                addNotesToDatabase()
+                addNotesToDatabase(it)
 
         }
         binding.redCircle.setOnClickListener {
@@ -67,7 +67,7 @@ lateinit var binding: FragmentAddNotesBinding
     }
 
     @SuppressLint("SimpleDateFormat")
-    private  fun addNotesToDatabase() {
+    private  fun addNotesToDatabase(view: View) {
 
         val title = binding.titleText.text.toString()
         val subtitle = binding.subtitleText.text.toString()
@@ -77,9 +77,9 @@ lateinit var binding: FragmentAddNotesBinding
         val currentDate = formatter.format(date)
         val createdNote = NotesEntityModel(null, title = title, subTitle = subtitle, notes = notes, date = currentDate, priority = priority)
         CoroutineScope(Dispatchers.IO).launch {
-
             viewModel.addNotes(createdNote)
         }
+        Navigation.findNavController(view).navigate(R.id.action_addNotesFragment_to_homeFragment)
 
 
 

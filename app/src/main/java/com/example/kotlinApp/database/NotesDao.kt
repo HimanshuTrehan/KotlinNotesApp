@@ -22,7 +22,7 @@ interface NotesDao {
 
 
     @Query("DELETE FROM Notes WHERE id=:id")
-    fun deleteNotes(id:Int)
+   suspend fun deleteNotes(id:Int)
 
     @Update(onConflict = REPLACE)
   suspend  fun updateNotes(notes:NotesEntityModel)

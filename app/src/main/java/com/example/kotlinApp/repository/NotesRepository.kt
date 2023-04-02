@@ -20,7 +20,7 @@ class NotesRepository(val dao:NotesDao) {
         dao.updateNotes(notes)
     }
 
-    fun deleteNotes(id:Int)
+    suspend fun deleteNotes(id:Int)
     {
         dao.deleteNotes(id)
     }

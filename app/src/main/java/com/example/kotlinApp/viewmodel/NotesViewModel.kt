@@ -29,7 +29,7 @@ class NotesViewModel(application: Application):AndroidViewModel(application) {
         repository.updateNotes(notes)
     }
 
-    fun deleteNote(id:Int)
+    suspend fun deleteNote(id:Int)
     {
         repository.deleteNotes(id)
     }
